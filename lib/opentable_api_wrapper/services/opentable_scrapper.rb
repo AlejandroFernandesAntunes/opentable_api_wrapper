@@ -50,12 +50,12 @@ class OpentableScrapper
   private
 
   def fresh_oauth_token
-    auth_uri = URI(@auth_url)
+    auth_uri = URI(OpentableApiWrapper.configuration.auth_url)
     https = Net::HTTP.new(auth_uri.host, auth_uri.port)
     https.use_ssl = true
     request = Net::HTTP::Get.new(auth_uri)
-    request.basic_auth @client_id,
-                       @api_pass
+    request.basic_auth OpentableApiWrapper.configuration.client_id,
+                        OpentableApiWrapper.configuration.api_pass
     response = https.request(request)
     JSON.parse(response.body)
   end
@@ -72,7 +72,7 @@ class OpentableScrapper
 
   def call_directory_api(query)
     HTTParty.get(
-      URI(@directory_url),
+      URI(OpentableApiWrapper.configuration.directory_url),
       query: query,
       headers: {
         'Authorization' => auth_from_token(@oauth_token)
