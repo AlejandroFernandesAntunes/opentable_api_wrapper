@@ -2,7 +2,7 @@
 
 require 'active_record'
 
-class OpenTableRestaurant < ApplicationRecord
+class OpenTableRestaurant < ActiveRecord::Base
   reverse_geocoded_by :latitude, :longitude
   before_validation :assign_aux_composed_id
 
