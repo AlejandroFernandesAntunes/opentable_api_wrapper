@@ -4,7 +4,7 @@ require 'active_record'
 require 'geocoder'
 
 class OpenTableRestaurant < ActiveRecord::Base
-  reverse_geocoded_by :latitude, :longitude
+  Geocoder::reverse_geocoded_by :latitude, :longitude
   before_validation :assign_aux_composed_id
 
   PICTURE_SIZES_CHART = {
