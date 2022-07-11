@@ -20,10 +20,10 @@ module OpentableApiWrapper
     attr_accessor :auth_url, :directory_url, :client_id, :api_pass
 
     def initialize
-      @auth_url = 'https://oauth-pp.opentable.com/api/v2/oauth/token?grant_type=client_credentials'
-      @directory_url = 'https://platform.otqa.com/sync/directory'
-      @client_id = nil
-      @api_pass = nil
+      auth_url = 'https://oauth-pp.opentable.com/api/v2/oauth/token?grant_type=client_credentials'
+      directory_url = 'https://platform.otqa.com/sync/directory'
+      client_id = nil
+      api_pass = nil
     end
   end
 end
