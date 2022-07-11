@@ -2,6 +2,10 @@
 
 require_relative 'opentable_api_wrapper/version'
 
+Dir["#{File.dirname(__FILE__)}/opentable_api_wrapper/**/*.rb"].sort.each do |file|
+  require file
+end
+
 module OpentableApiWrapper
   def self.configuration
     @configuration ||= Configuration.new
