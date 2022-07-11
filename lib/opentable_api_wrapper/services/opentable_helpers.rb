@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'geocoder'
+
 class OpentableHelpers
   COUNTRY_CODES = [
     { country_code: 'AF', country: 'Afghanistan' },

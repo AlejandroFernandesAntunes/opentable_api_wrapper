@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'active_record'
+require 'geocoder'
 
 class OpenTableRestaurant < ActiveRecord::Base
   reverse_geocoded_by :latitude, :longitude

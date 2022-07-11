@@ -10,12 +10,12 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'OpenTable API Wrapper'
   spec.description = 'OpenTable API Wrapper'
-  spec.homepage = "https://github.com/AlejandroFernandesAntunes/opentable_api_wrapper.git"
+  spec.homepage = 'https://github.com/AlejandroFernandesAntunes/opentable_api_wrapper.git'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.0.0'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = "https://github.com/AlejandroFernandesAntunes/opentable_api_wrapper.git"
+  spec.metadata['source_code_uri'] = 'https://github.com/AlejandroFernandesAntunes/opentable_api_wrapper.git'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'activerecord'
   spec.add_dependency 'activerecord-import'
   spec.add_dependency 'geocoder'
+  spec.add_dependency 'sidekiq'
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
