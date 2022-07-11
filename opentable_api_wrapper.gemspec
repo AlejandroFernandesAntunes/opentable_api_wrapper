@@ -32,8 +32,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'activerecord'
   spec.add_dependency 'activerecord-import'
   spec.add_dependency 'geocoder'
-  spec.add_dependency 'sidekiq'
   spec.add_dependency 'httparty'
+  spec.add_dependency 'sidekiq'
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

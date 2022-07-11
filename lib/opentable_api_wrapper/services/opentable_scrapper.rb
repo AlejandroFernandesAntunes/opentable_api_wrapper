@@ -58,7 +58,7 @@ class OpentableScrapper
     https.use_ssl = true
     request = Net::HTTP::Get.new(auth_uri)
     request.basic_auth OpentableApiWrapper.configuration.client_id,
-                        OpentableApiWrapper.configuration.api_pass
+                       OpentableApiWrapper.configuration.api_pass
     response = https.request(request)
     JSON.parse(response.body)
   end
