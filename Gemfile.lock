@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    opentable_api_wrapper (0.1.2)
+    opentable_api_wrapper (0.1.5)
       activerecord
       activerecord-import
       geocoder
@@ -71,6 +71,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  activerecord-import
+  geocoder
   opentable_api_wrapper!
   rake (~> 13.0)
   rspec (~> 3.0)
