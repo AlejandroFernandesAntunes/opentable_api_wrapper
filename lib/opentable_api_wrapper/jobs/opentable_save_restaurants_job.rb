@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'activerecord'
 require 'sidekiq'
 require 'activerecord-import'
 
