@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'active_record'
+
 class OpenTableRestaurant < ApplicationRecord
   reverse_geocoded_by :latitude, :longitude
   before_validation :assign_aux_composed_id
