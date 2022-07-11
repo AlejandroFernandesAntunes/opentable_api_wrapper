@@ -11,6 +11,9 @@
 # at least once a day to get the most current restaurant directory data.
 
 ###
+
+require 'httparty'
+
 class OpentableScrapper
   RESULTS_LIMIT = 1000
 
