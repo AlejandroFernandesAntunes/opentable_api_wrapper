@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-require 'activerecord'
 require 'sidekiq'
 
-class OpentableUpdateDirJob < ApplicationJob
+class OpentableUpdateDirJob < ActiveJob::Base
   queue_as :default
 
   def perform

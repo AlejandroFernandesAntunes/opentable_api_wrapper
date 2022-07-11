@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-require 'activerecord'
 require 'sidekiq'
 require 'activerecord-import'
 
-class OpentableSaveRestaurantsJob < ApplicationJob
+class OpentableSaveRestaurantsJob < ActiveJob::Base
   queue_as :ot_save_results
 
   def perform(restaurants_array)
