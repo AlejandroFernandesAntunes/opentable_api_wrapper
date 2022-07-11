@@ -11,9 +11,12 @@ gem 'opentable_api_wrapper'
 ```
 
 And then execute:
-
-    `$ bundle install && rake db:migrate`
-
+```
+$ bundle install
+$ bundle exec rails generate opentable_api_wrapper:install
+$ rake db:migrate
+```
+    
 
 ## Usage
 
