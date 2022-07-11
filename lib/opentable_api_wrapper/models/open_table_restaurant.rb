@@ -3,9 +3,9 @@
 require 'active_record'
 require 'geocoder'
 
-extend Geocoder::Model::ActiveRecord
-
 class OpenTableRestaurant < ActiveRecord::Base
+  extend Geocoder::Model::ActiveRecord
+  
   reverse_geocoded_by :latitude, :longitude
   before_validation :assign_aux_composed_id
 
