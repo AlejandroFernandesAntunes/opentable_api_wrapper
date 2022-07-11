@@ -12,8 +12,6 @@
 
 ###
 class OpentableScrapper
-  AUTH_URI = URI(@auth_url)
-  DIRECTORY_URI = URI(@directory_url)
   RESULTS_LIMIT = 1000
 
   def initialize
@@ -52,9 +50,10 @@ class OpentableScrapper
   private
 
   def fresh_oauth_token
-    https = Net::HTTP.new(AUTH_URI.host, AUTH_URI.port)
+    auth_uri = URI(@auth_url)
+    https = Net::HTTP.new(auth_uri.host, auth_uri.port)
     https.use_ssl = true
-    request = Net::HTTP::Get.new(AUTH_URI)
+    request = Net::HTTP::Get.new(auth_uri)
     request.basic_auth @client_id,
                        @api_pass
     response = https.request(request)
@@ -73,7 +72,7 @@ class OpentableScrapper
 
   def call_directory_api(query)
     HTTParty.get(
-      DIRECTORY_URI,
+      URI(@directory_url),
       query: query,
       headers: {
         'Authorization' => auth_from_token(@oauth_token)
